@@ -1,0 +1,103 @@
+{
+  "expo": {
+    "name": "ScholarMate",
+    "slug": "scholar-mate",
+    "scheme": "scholarmate",
+    "version": "7.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/owl.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4F46E5"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f5875c42-43ab-4f4e-bc24-cfe07458744a",
+      "enabled": true,
+      "fallbackToCacheTimeout": 0,
+      "checkAutomatically": "ON_LOAD"
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/owl.png",
+          "color": "#4F46E5",
+          "sounds": ["./assets/doing.mp3"]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ScholarMate needs photo access to upload study materials and set your profile picture.",
+          "cameraPermission": "ScholarMate needs camera access to photograph study materials and receipts."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "ScholarMate needs microphone access for voice input to the ACE AI tutor."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "ScholarMate needs photo library access to save your exported timetable.",
+          "savePhotosPermission": "ScholarMate needs permission to save images to your gallery.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      "expo-asset",
+      "expo-web-browser",
+      "expo-font",
+      "@react-native-google-signin/google-signin"
+    ],
+    "android": {
+      "newArchEnabled": true,
+      "softwareKeyboardLayoutMode": "resize",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": false,
+          "data": [{ "scheme": "scholarmate" }],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A1A"
+      },
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.VIBRATE",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO"
+      ],
+      "package": "com.princeisaac.scholarmate"
+    },
+    "ios": {
+      "bundleIdentifier": "com.princeisaac.scholarmate",
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f5875c42-43ab-4f4e-bc24-cfe07458744a"
+      }
+    },
+    "owner": "princeisaacii"
+  }
+}
